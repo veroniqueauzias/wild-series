@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Risque&display=swap');
+$body-bg:#8EBE06;
+$body-color:#000000;
+$light:#64EB71;
+$font-family-base:'Patrick Hand SC', cursive;
+$font-family-secondary: 'Risque', cursive;
+.navbar-brand{
+  font-family: $font-family-secondary;
+}
+
+@import "~bootstrap/scss/bootstrap";
+
+
+/*Styleguide:
+
+Colors:
+Backgroud; #8EBE06
+Header-footer:  #64EB71
+Titles : 5C355
+Text:000000
+
+Polices;
+Main Titles: Risque
+Text: Patrick Hand sc
+*/
