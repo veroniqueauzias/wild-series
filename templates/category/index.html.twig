@@ -6,7 +6,7 @@
     <h1>Toutes les categories de la table category:</h1>
     {% for category in categories %}
         <div>
-            <h2>{{ loop.index }} / {{ category.name }} : </h2>
+            <h2>{{ loop.index }} / <a href="{{ path("category_show", { categoryName: category.name })}}">{{ category.name }} : </a></h2>
         </div>
     {% else %}
         Aucune catégorie trouvée.
