@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Saison {{ season.number }} de {{ program.title }}</h1>
+<p> La {{ season.number}} ème saison de {{ program.title }} est composée de {{ season.episodes|length }} episodes (oui sorry c'est long à charger chez nous) a été diffusée depuis {{ program.year}} au {{ program.country}}
+</p>
+
+    <h2>Liste des épisodes:<h2>
+    <ul>
+        {% for episode in season.episodes %}
+        <li>
+            Episode {{ episode.number }}: {{ episode.title }}
+        </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
