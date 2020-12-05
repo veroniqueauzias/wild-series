@@ -51,13 +51,9 @@ class ProgramController extends AbstractController
             );
         }
 
-        //challenge ?1 récuperer le program (Season?) passe les saisons
-        // que tu viens de récupérer à la vue
         $seasons = $this->getDoctrine() //au plusiel car je boucle sur toutes les saisons
             ->getRepository(Season::class)
             ->findBy(['program' => $program]);
-
-            //var_dump($seasons);
 
         return $this->render('program/show.html.twig', [
             'program' => $program,
