@@ -9,6 +9,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Form\CategoryType;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @Route("/categories", name="category_")
@@ -31,6 +33,38 @@ class CategoryController extends AbstractController
             ['categories' => $categories]
         );
     }
+    /**
+     * The controller for the category add form
+     *
+     * @Route("/new", name ="new")
+     * @return Response
+     */
+    public function new(Request $request) : Response
+    {
+        //create Category Object
+        $category = new Category();
+        //Create the form
+        $form = $this->createForm(CategoryType::class, $category);
+        //Get data from HTTP request
+        $form->handleRequest($request);
+        //Was the form submitted?
+        if($form->isSubmitted()) {
+            //get entity manager
+            $entityManager = $this->getDoctrine()->getManager();
+            // Persist object(Category)
+            $entityManager->persist($category);
+            //Flush
+            $entityManager->flush();
+            //Redirect to list
+            return $this->redirectToRoute('category_index');
+        }
+        //Render the form
+        return $this->render('category/new.html.twig', [
+            "form" => $form->createView(),
+        ]);
+
+    }
+
     /**
      * Getting a category by name
      *
@@ -55,4 +89,5 @@ class CategoryController extends AbstractController
             'programs' => $programs
         ]);
     }
+
 }
