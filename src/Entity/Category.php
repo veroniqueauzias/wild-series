@@ -44,6 +44,7 @@ class Category
 
     /**
      * param Program
+     * @param Program $program
      * @return Category
      */
     public function addProgram(Program $program): self
@@ -55,6 +56,11 @@ class Category
 
         return $this;
     }
+
+    /**
+     * @param Program $program
+     * @return Category
+     */
 
     public function removeProgram(Program $program): self
     {
