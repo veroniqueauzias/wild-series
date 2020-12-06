@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Season
 {
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -48,6 +49,12 @@ class Season
     public function __construct()
     {
         $this->episodes = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+
+        return $this->program->getTitle() . " " . $this->number;
     }
 
     public function getId(): ?int
