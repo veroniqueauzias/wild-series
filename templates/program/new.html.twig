@@ -2,9 +2,11 @@
 
 {% block body %}
     <h1>Add a program</h1>
+    <div style="width:50%">
     {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
     {{ form_errors(form) }}
     {{ form_widget(form) }}
     <input type='submit' value='Add program'>
     {{ form_end(form) }}
+    </div>
 {% endblock %}
