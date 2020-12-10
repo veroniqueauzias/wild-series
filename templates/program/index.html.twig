@@ -14,7 +14,7 @@
     {% else %}
         Aucune série trouvée.
     {% endfor %}
-    <!--<h3><a href="{#  {{ path('program_new') }}#}">Ajouter un program</a></h3>--><!--Q11 ajouter en tant qu'administrateur, ne pas afficher de lien pour l'utilistateur -->
+    <p><a href="{{ path('program_new') }}">Ajouter une série</a></p>
     <a href="{{ path('app_index') }}">
         Retour à l'accueil
     </a>
