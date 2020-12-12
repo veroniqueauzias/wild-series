@@ -1,6 +1,6 @@
 # wild-series
 
-Viséo Q16_Fixtures: https://www.loom.com/share/a963c42b4b8a4d399d5c51b655f5c1d9
+Viséo Q16_Fixtures: https://www.loom.com/share/158efeb4cb824fbf9922ad202d300eb0
 
 Vidéo Q15_Symfony: EntityType: https://www.loom.com/share/cda82b6c4cbd46e2b5a50c065e77cb83
 
