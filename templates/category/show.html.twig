@@ -6,7 +6,7 @@
     <h1>Categorie {{ programs[0].category.name }} : </h1>
     {% for program in programs %}
         <div>
-            <h2>{{ program.id }} : <a href="{{ path("program_show", { id: program.id }) }}">{{ program.title|capitalize }}</a></h2>
+            <h2>{{ program.id }} : <a href="{{ path("program_show", { programSlug: program.slug }) }}">{{ program.title|capitalize }}</a></h2>
             <p>{{program.synopsis}}</p>
         </div>
     {% else %}

@@ -68,8 +68,9 @@ class CategoryController extends AbstractController
     /**
      * Getting a category by name
      *
-     *@Route("/{categoryName}", name="show")
-     *@return Response
+     * @Route("/{categoryName}", methods={"GET"}, name="show")
+     * @param string $categoryName
+     * @return Response
      */
 
     public function show(string $categoryName): Response
