@@ -1,5 +1,7 @@
 # wild-series
 
+Vidéo Q18_Emails: https://www.loom.com/share/7cba80dafd214c56a4b0639ac1af2f0b
+
 Vidéo Q17_Services: https://www.loom.com/share/3eca1daa73b54d72a38038aa580754ba
 
 Vidéo Q16_Fixtures: https://www.loom.com/share/a963c42b4b8a4d399d5c51b655f5c1d9

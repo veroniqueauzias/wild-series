@@ -1,0 +1,8 @@
+{% extends '_mail_layout.html.twig' %}
+{% block title %}Nouvel épisode!{% endblock %}
+{% block body %}
+<h1>Le nouvel épisode {{ episode.title }} est sorti!</h1>
+<p>Salut! Le nouvel épisode {{ episode.title }} n° {{ episode.number }}de la série {{ episode.season.program.title}} a été ajouté sur Wild Séries!</p>
+   <a href="localhost:8000{{ path('episode_show', {'episode': episode.slug}) }}">Voir la fiche de l'épisode</a>
+{% endblock %}
+
