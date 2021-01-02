@@ -11,7 +11,7 @@
         <tr>
             <th>Il a joué dans</th>
             {% for program in actor.programs %} <!-- dans le dump de l'acteur, j'ai bien program-->
-                <td><a href="{{ path("program_show", {id: program.id}) }}"> {{ program.title}}</a></td>
+                <td><a href="{{ path("program_show", {programSlug: program.slug}) }}"> {{ program.title}}</a></td>
             {% endfor %}
         </tr>
             </tbody>
